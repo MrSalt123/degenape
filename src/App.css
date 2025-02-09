@@ -6,10 +6,18 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Daydream';
+  src: url('./assets/fonts/Daydream.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .landing-page {
   background-image: url('./assets/images/degenape4.webp');
   background-size: cover;
   overflow-x: hidden;
+  background-position: center;
   /* box-shadow: 0px 10px 5px rgb(200,200,200); */
 }
 
@@ -44,5 +52,27 @@ body {
   height: 100%;
   margin: 0;
   overflow-x: hidden;
-  background-color: rgb(241,241,241);
+  background-image: linear-gradient(rgb(242, 196, 32), rgb(248,36,66));
+}
+
+.ca-text {
+  font-family: 'Daydream', sans-serif;
+}
+
+.card-title {
+  font-family: 'Daydream', sans-serif;
+  font-size: 1rem;
+}
+
+.layer1 {
+  background-image: url('./assets/images/degenapelayer1.png');
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+.layer2 {
+  background-image: url('./assets/images/degenapelayer2.png');
+  background-size: cover;
+  overflow-x: hidden;
+  background-position: center;
 }

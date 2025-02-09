@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import hotbox from './assets/images/hotbox.jpg';
 import phantom from './assets/images/phantom.svg';
 import solana from './assets/images/solana.avif';
 import swap from './assets/images/swap.svg';
+import degenapelayer1 from './assets/images/degenapelayer1.png';
+import degenapelayer2 from './assets/images/degenapelayer2.png';
 
 function App() {
   return (
@@ -66,12 +66,20 @@ function App() {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={1} speed={0}>
-          <div className="bg-[rgb(241,241,241)] h-full w-full"></div>
+
+        {/* PIXEL MONKEY LAYERS */}
+        <ParallaxLayer offset={1} speed={.15}>
+          <div className="w-full h-full layer1">
+          </div>
+        </ParallaxLayer>
+
+        <ParallaxLayer offset={1} speed={.25}>
+          <div className="w-full h-full layer2">
+          </div>
         </ParallaxLayer>
 
         {/* White Section */}
-        <ParallaxLayer 
+        <ParallaxLayer
           offset={1}
           speed={.25}>
           <div className='buy-text h-10 w-full flex justify-center mt-5'>
@@ -79,40 +87,49 @@ function App() {
           </div>
         </ParallaxLayer>
 
+        <ParallaxLayer offset={1} speed={.3}>
+          <div className="h-full w-full flex justify-center items-center">
+            <div className="d-flex justify-content-center gap-5">
+              <Card style={{ width: '18rem', boxShadow: '10px 10px 5px' }} className="d-flex flex-column">
+                <Card.Img variant="top" src={phantom} />
+                <Card.Body className="d-flex flex-column flex-grow-1">
+                  <Card.Title className="card-title text-center">Set up a wallet</Card.Title>
+                  <Card.Text className="flex-grow-1 text-center">
+                    Download a Solana-compatible wallet (Phantom, Solflare, Sollet, etc.).
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+
+              <Card style={{ width: '18rem', boxShadow: '10px 10px 5px' }} className="d-flex flex-column">
+                <Card.Img variant="top" src={solana} />
+                <Card.Body className="d-flex flex-column flex-grow-1">
+                  <Card.Title className="card-title text-center">Buy SOL</Card.Title>
+                  <Card.Text className="flex-grow-1 text-center">
+                    Acquire SOL from a supported exchange (Coinbase, Binance, etc.) and send SOL to your wallet
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+
+              <Card style={{ width: '18rem', boxShadow: '10px 10px 5px' }} className="d-flex flex-column">
+                <Card.Img variant="top" src={swap} />
+                <Card.Body className="d-flex flex-column flex-grow-1">
+                  <Card.Title className="card-title text-center">Swap SOL for DAPE</Card.Title>
+                  <Card.Text className="flex-grow-1 text-center">
+                    Copy the CA below and then swap SOL for DAPE either through a DEX or directly in your wallet.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </div>
+          </div>
+        </ParallaxLayer>
+
+
         <ParallaxLayer
           offset={1}
-          speed={.3}
+          speed={.5}
         >
-          <div className="h-full w-full flex justify-center items-center gap-5">
-            <Card style={{ width: '18rem', boxShadow: '10px 10px 5px'  }}>
-              <Card.Img variant="top" src={phantom} />
-              <Card.Body>
-                <Card.Title>Set up a wallet</Card.Title>
-                <Card.Text>
-                  Download a solana compatible wallet (Phantom, Solflare, Sollet, etc.)
-                </Card.Text>
-              </Card.Body>
-            </Card>
-
-            <Card style={{ width: '18rem', boxShadow: '10px 10px 5px' }}>
-              <Card.Img variant="top" src={solana} />
-              <Card.Body>
-                <Card.Title>Fund your wallet with SOL</Card.Title>
-                <Card.Text>
-                  Acquire SOL from a supported exchange (Coinbase, Binance, etc.)
-                </Card.Text>
-              </Card.Body>
-            </Card>
-
-            <Card style={{ width: '18rem', boxShadow: '10px 10px 5px'  }}>
-              <Card.Img variant="top" src={swap} />
-              <Card.Body>
-                <Card.Title>Swap SOL for DAPE</Card.Title>
-                <Card.Text>
-                  Copy the CA below and then swap SOL for DAPE either through a DEX or directly in your wallet
-                </Card.Text>
-              </Card.Body>
-            </Card>
+          <div className='flex justify-center absolute bottom-1/6 w-full'>
+            <p className='ca-text'>CA: NOT OUT YET</p>
           </div>
         </ParallaxLayer>
 
