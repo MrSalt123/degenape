@@ -26,8 +26,7 @@
 }
 
 .buy-text {
-  font-family: 'Groteski', sans-serif;
-  font-size: 25px;
+  font-family: 'Daydream', sans-serif;
 }
 
 .top-left-text {
@@ -65,14 +64,8 @@ body {
 }
 
 .layer1 {
-  background-image: url('./assets/images/degenapelayer1.png');
+  background-image: url('./assets/images/degenapebg.png');
   background-size: cover;
+  background-position: center center no-repeat;
   overflow-x: hidden;
-}
-
-.layer2 {
-  background-image: url('./assets/images/degenapelayer2.png');
-  background-size: cover;
-  overflow-x: hidden;
-  background-position: center;
 }

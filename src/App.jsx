@@ -1,14 +1,14 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import Card from 'react-bootstrap/Card';
 import phantom from './assets/images/phantom.svg';
 import solana from './assets/images/solana.avif';
 import swap from './assets/images/swap.svg';
-import degenapelayer1 from './assets/images/degenapelayer1.png';
-import degenapelayer2 from './assets/images/degenapelayer2.png';
 
 function App() {
+  const windowWidth = useState(window.innerWidth);
+
   return (
     <div>
       <Parallax pages={2} style={{ top: 0, left: 0 }}>
@@ -68,26 +68,13 @@ function App() {
 
 
         {/* PIXEL MONKEY LAYERS */}
-        <ParallaxLayer offset={1} speed={.15}>
+        <ParallaxLayer offset={1} speed={.25}>
           <div className="w-full h-full layer1">
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={1} speed={.25}>
-          <div className="w-full h-full layer2">
-          </div>
-        </ParallaxLayer>
 
-        {/* White Section */}
-        <ParallaxLayer
-          offset={1}
-          speed={.25}>
-          <div className='buy-text h-10 w-full flex justify-center mt-5'>
-            <p className='text-4xl drop-shadow-[2px_2px_0px_gray]'>HOW TO BUY</p>
-          </div>
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={1} speed={.3}>
+        <ParallaxLayer offset={1} speed={.35}>
           <div className="h-full w-full flex justify-center items-center">
             <div className="d-flex justify-content-center gap-5">
               <Card style={{ width: '18rem', boxShadow: '10px 10px 5px' }} className="d-flex flex-column">
@@ -128,7 +115,7 @@ function App() {
           offset={1}
           speed={.5}
         >
-          <div className='flex justify-center absolute bottom-1/6 w-full'>
+          <div className='flex justify-center absolute bottom-1/12 w-full'>
             <p className='ca-text'>CA: NOT OUT YET</p>
           </div>
         </ParallaxLayer>
