@@ -13,6 +13,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Minecraft';
+  src: url('./assets/fonts/minecraft.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .landing-page {
   background-image: url('./assets/images/degenape4.webp');
   background-size: cover;
@@ -63,9 +70,26 @@ body {
   font-size: 1rem;
 }
 
+.card-text {
+  font-family: 'Minecraft', sans-serif;
+  font-size: .8rem;
+}
+
 .layer1 {
-  background-image: url('./assets/images/degenapebg.png');
-  background-size: cover;
-  background-position: center center no-repeat;
+  background-image: url('./assets/images/degenapelayer1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
   overflow-x: hidden;
+}
+
+.cards-container {
+  display: flex;
+  gap: 1.25rem; /* Adjust spacing between cards */
+  overflow-x: auto; /* Enables horizontal scrolling */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 1rem;
+  white-space: nowrap;
+  width: 100vw;
 }
