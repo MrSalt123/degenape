@@ -76,8 +76,8 @@ body {
 }
 
 .layer1 {
-  background-image: url('./assets/images/degenapelayer1.png');
-  background-size: contain;
+  background-image: url('./assets/images/layer1.png');
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
   overflow-x: hidden;

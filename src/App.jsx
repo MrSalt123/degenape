@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div>
-      <Parallax pages={2} style={{ top: 0, left: 0 }}>
+      <Parallax pages={3} style={{ top: 0, left: 0 }}>
         <ParallaxLayer offset={0} speed={0} factor={1}>
           <div className='landing-page h-full w-full'></div>
         </ParallaxLayer>
@@ -81,24 +81,25 @@ function App() {
 
 
         {/* PIXEL MONKEY LAYERS */}
-        {isMobile ? (
-          <ParallaxLayer offset={1} speed={.2}>
-            <div className="absolute top-0 left-0 w-full h-full flex justify-center">
-              <p className="mt-5 buy-text text-4xl font-bold">How to Buy</p>
-            </div>
-          </ParallaxLayer>
-        ) : (
-          <ParallaxLayer offset={1} speed={0.25}>
-            <div className="w-full h-full flex flex-col justify-center">
-              <img className='w-full h-1/3' src={layer1}/>
-              <img className='w-full h-1/3' src={layer2}/>
-              <img className='w-full h-1/3' src={layer3}/>
-            </div>
-          </ParallaxLayer>
-        )}
+        <ParallaxLayer offset={1} speed={0.25} factor={1} sticky={{start: 1, end: 2}}>
+          <div className="w-full h-full flex flex-col justify-center">
+            {!isMobile && (
+              <>
+                <img className="w-full h-1/3" src={layer1} />
+                <img className="w-full h-1/3" src={layer2} />
+                <img className="w-full h-1/3" src={layer3} />
+              </>
+            )}
+          </div>
+        </ParallaxLayer>
 
+        <ParallaxLayer offset={1} speed={.15} sticky={{start: 1, end: 1}}>
+          <div className="absolute top-0 left-0 w-full h-full flex justify-center">
+            <p className="mt-5 buy-text text-4xl font-bold">How to Buy</p>
+          </div>
+        </ParallaxLayer>
 
-        <ParallaxLayer offset={1} speed={.35}>
+        <ParallaxLayer offset={1} speed={.35} sticky={{start: 1, end: 1}}>
           <div className="h-full w-full flex justify-center items-center">
             <div className="d-flex justify-content-center gap-5">
               <Card style={{ width: '18rem', boxShadow: '10px 10px 5px' }} className="d-flex flex-column">
@@ -138,9 +139,16 @@ function App() {
         <ParallaxLayer
           offset={1}
           speed={.5}
+          sticky={{start: 1, end: 1}}
         >
           <div className='flex justify-center absolute bottom-1/12 w-full'>
             <p className='ca-text drop-shadow-[2px_2px_0px_white]'>CA: NOT OUT YET</p>
+          </div>
+        </ParallaxLayer>
+
+        <ParallaxLayer offset={2} speed={.3}>
+          <div className='flex h-full w-full items-center justify-center'>
+            <p>Hello World</p>
           </div>
         </ParallaxLayer>
 
