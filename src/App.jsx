@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div>
-      <Parallax pages={isMobile ? 2.7 : 2} style={{ top: 0, left: 0 }}>
+      <Parallax pages={isMobile ? 3 : 2} style={{ top: 0, left: 0 }}>
         <ParallaxLayer offset={0} speed={0} factor={1}>
           <div className='landing-page h-full w-full'></div>
         </ParallaxLayer>
