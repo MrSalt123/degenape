@@ -8,6 +8,7 @@ import swap from './assets/images/swap.svg';
 import layer1 from './assets/images/layer1.png';
 import layer2 from './assets/images/layer2.png';
 import layer3 from './assets/images/layer3.png';
+import bg2 from './assets/images/degenapebg2.png';
 
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -24,7 +25,7 @@ function App() {
 
   return (
     <div>
-      <Parallax pages={3} style={{ top: 0, left: 0 }}>
+      <Parallax pages={2} style={{ top: 0, left: 0 }}>
         <ParallaxLayer offset={0} speed={0} factor={1}>
           <div className='landing-page h-full w-full'></div>
         </ParallaxLayer>
@@ -40,7 +41,7 @@ function App() {
             <div className="top-left-text absolute top-5 left-5 flex flex-col">
               <div
                 className="flex gap-1 text-white text-xl hover:scale-110 hover:cursor-pointer transition-transform duration-200"
-                onClick={() => window.open("https://x.com/", "_blank")}
+                onClick={() => window.open("https://x.com/degenape420", "_blank")}
               >
                 <p>『</p>
                 <p className='drop-shadow-[2px_2px_0px_black]'>X</p>
@@ -48,7 +49,7 @@ function App() {
               </div>
               <div
                 className="flex gap-1 text-white text-xl hover:scale-110 hover:cursor-pointer transition-transform duration-200"
-                onClick={() => window.open("https://t.me/", "_blank")}
+                onClick={() => window.open("https://t.me/degenape_portal", "_blank")}
               >
                 <p>『</p>
                 <p className='drop-shadow-[2px_2px_0px_black]'>TG</p>
@@ -79,9 +80,24 @@ function App() {
           </div>
         </ParallaxLayer>
 
+{/*
+        <ParallaxLayer offset={1} speed={0.3}>
+          <div className="flex justify-center items-center h-screen w-screen">
+            <img className="w-full h-full p-5 rounded-2xl" src={bg2} alt="Background" />
+          </div>
+        </ParallaxLayer>
 
+        <ParallaxLayer offset={1} speed={.15}>
+          <div className='flex flex-col h-full w-full items-start justify-center ml-5 p-5 gap-5 text-white'>
+            <p className='text-6xl definition'>DEGENAPE</p>
+            <p className='definition-text text-4xl'>/dəˈjenāp/</p>
+            <p className='definition-text text-4xl drop-shadow-[2px_2px_0px_black]'>The inner spirit animal of a degen crypto trader, symbolizing an embrace of volatility, meme culture, and unrelenting diamond-handedness.</p>
+          </div>
+        </ParallaxLayer>
+
+ */}
         {/* PIXEL MONKEY LAYERS */}
-        <ParallaxLayer offset={1} speed={0.25} factor={1} sticky={{start: 1, end: 2}}>
+        <ParallaxLayer offset={1} speed={0.25}>
           <div className="w-full h-full flex flex-col justify-center">
             {!isMobile && (
               <>
@@ -93,13 +109,13 @@ function App() {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={1} speed={.15} sticky={{start: 1, end: 1}}>
+        <ParallaxLayer offset={1} speed={.15}>
           <div className="absolute top-0 left-0 w-full h-full flex justify-center">
             <p className="mt-5 buy-text text-4xl font-bold">How to Buy</p>
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={1} speed={.35} sticky={{start: 1, end: 1}}>
+        <ParallaxLayer offset={1} speed={.35}>
           <div className="h-full w-full flex justify-center items-center">
             <div className="d-flex justify-content-center gap-5">
               <Card style={{ width: '18rem', boxShadow: '10px 10px 5px' }} className="d-flex flex-column">
@@ -139,18 +155,13 @@ function App() {
         <ParallaxLayer
           offset={1}
           speed={.5}
-          sticky={{start: 1, end: 1}}
         >
           <div className='flex justify-center absolute bottom-1/12 w-full'>
             <p className='ca-text drop-shadow-[2px_2px_0px_white]'>CA: NOT OUT YET</p>
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={2} speed={.3}>
-          <div className='flex h-full w-full items-center justify-center'>
-            <p>Hello World</p>
-          </div>
-        </ParallaxLayer>
+
 
       </Parallax>
     </div>
