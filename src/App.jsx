@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div>
-      <Parallax pages={2} style={{ top: 0, left: 0 }}>
+      <Parallax pages={isMobile ? 2.7 : 2} style={{ top: 0, left: 0 }}>
         <ParallaxLayer offset={0} speed={0} factor={1}>
           <div className='landing-page h-full w-full'></div>
         </ParallaxLayer>
@@ -49,7 +49,7 @@ function App() {
               </div>
               <div
                 className="flex gap-1 text-white text-xl hover:scale-110 hover:cursor-pointer transition-transform duration-200"
-                onClick={() => window.open("https://t.me/degenape_portal", "_blank")}
+                onClick={() => window.open("https://t.me/", "_blank")}
               >
                 <p>『</p>
                 <p className='drop-shadow-[2px_2px_0px_black]'>TG</p>
@@ -115,48 +115,43 @@ function App() {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={1} speed={.35}>
-          <div className="h-full w-full flex justify-center items-center">
-            <div className="d-flex justify-content-center gap-5">
-              <Card style={{ width: '18rem', boxShadow: '10px 10px 5px' }} className="d-flex flex-column">
-                <Card.Img variant="top" src={phantom} />
-                <Card.Body className="d-flex flex-column flex-grow-1">
-                  <Card.Title className="card-title text-center">Set up a wallet</Card.Title>
-                  <Card.Text className="flex-grow-1 text-center card-text">
-                    Download a Solana-compatible wallet (Phantom, Solflare, Sollet, etc.).
-                  </Card.Text>
-                </Card.Body>
-              </Card>
+        <ParallaxLayer offset={isMobile? 1.1 : 1} speed={.35}>
+          <div className={`h-full w-full flex ${isMobile ? 'flex-col' : 'justify-center'} items-center gap-5 p-5`}>
+            <Card style={{ width: '18rem', boxShadow: '10px 10px 5px' }} className="d-flex flex-column">
+              <Card.Img variant="top" src={phantom} />
+              <Card.Body className="d-flex flex-column flex-grow-1">
+                <Card.Title className="card-title text-center">Set up a wallet</Card.Title>
+                <Card.Text className="flex-grow-1 text-center card-text">
+                  Download a Solana-compatible wallet (Phantom, Solflare, Sollet, etc.).
+                </Card.Text>
+              </Card.Body>
+            </Card>
 
-              <Card style={{ width: '18rem', boxShadow: '10px 10px 5px' }} className="d-flex flex-column">
-                <Card.Img variant="top" src={solana} />
-                <Card.Body className="d-flex flex-column flex-grow-1">
-                  <Card.Title className="card-title text-center">Buy SOL</Card.Title>
-                  <Card.Text className="flex-grow-1 text-center card-text">
-                    Acquire SOL from a supported exchange (Coinbase, Binance, etc.) and send SOL to your wallet
-                  </Card.Text>
-                </Card.Body>
-              </Card>
+            <Card style={{ width: '18rem', boxShadow: '10px 10px 5px' }} className="d-flex flex-column">
+              <Card.Img variant="top" src={solana} />
+              <Card.Body className="d-flex flex-column flex-grow-1">
+                <Card.Title className="card-title text-center">Buy SOL</Card.Title>
+                <Card.Text className="flex-grow-1 text-center card-text">
+                  Acquire SOL from a supported exchange and send SOL to your wallet.
+                </Card.Text>
+              </Card.Body>
+            </Card>
 
-              <Card style={{ width: '18rem', boxShadow: '10px 10px 5px' }} className="d-flex flex-column">
-                <Card.Img variant="top" src={swap} />
-                <Card.Body className="d-flex flex-column flex-grow-1">
-                  <Card.Title className="card-title text-center">Swap SOL for DAPE</Card.Title>
-                  <Card.Text className="flex-grow-1 text-center card-text">
-                    Copy the CA below and then swap SOL for DAPE either through a DEX or directly in your wallet.
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </div>
+            <Card style={{ width: '18rem', boxShadow: '10px 10px 5px' }} className="d-flex flex-column">
+              <Card.Img variant="top" src={swap} />
+              <Card.Body className="d-flex flex-column flex-grow-1">
+                <Card.Title className="card-title text-center">Swap SOL for DAPE</Card.Title>
+                <Card.Text className="flex-grow-1 text-center card-text">
+                  Copy the CA below and then swap SOL for DAPE either through a DEX or directly in your wallet.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+            
           </div>
         </ParallaxLayer>
 
-
-        <ParallaxLayer
-          offset={1}
-          speed={.5}
-        >
-          <div className='flex justify-center absolute bottom-1/12 w-full'>
+        <ParallaxLayer offset={isMobile ? 2.4 : 1.8} speed={.5}>
+          <div className='flex justify-center items-center p-5 w-full'>
             <p className='ca-text drop-shadow-[2px_2px_0px_white]'>CA: NOT OUT YET</p>
           </div>
         </ParallaxLayer>
