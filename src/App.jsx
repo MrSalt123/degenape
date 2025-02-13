@@ -150,7 +150,7 @@ function App() {
           </div>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={isMobile ? 2.7 : 1.8} speed={.5}>
+        <ParallaxLayer offset={isMobile ? 2.8 : 1.8} speed={.5}>
           <div className='flex justify-center items-center p-5 w-full'>
             <p className='ca-text drop-shadow-[2px_2px_0px_white]'>CA: NOT OUT YET</p>
           </div>
