@@ -57,10 +57,10 @@ function App() {
               </div>
               <div
                 className="flex gap-1 text-white text-xl hover:scale-110 hover:cursor-pointer transition-transform duration-200"
-                onClick={() => window.open("https://pump.fun", "_blank")}
+                onClick={() => window.open("https://dexscreener.com/solana/eltnkcceyqcd1dpwy8jnm13funcdmquqxc9qe3oomoon", "_blank")}
               >
                 <p>『</p>
-                <p className='drop-shadow-[2px_2px_0px_black]'>PUMP</p>
+                <p className='drop-shadow-[2px_2px_0px_black]'>MOON</p>
                 <p>』</p>
               </div>
               <div
@@ -152,7 +152,7 @@ function App() {
 
         <ParallaxLayer offset={isMobile ? 2.8 : 1.8} speed={.5}>
           <div className='flex justify-center items-center p-5 w-full'>
-            <p className='ca-text drop-shadow-[2px_2px_0px_white]'>CA: NOT OUT YET</p>
+            <p className='ca-text drop-shadow-[2px_2px_0px_white]'>CA: ELtNkccEyqCD1dPWY8jnM13FUNcdMQUQxc9qE3oomoon</p>
           </div>
         </ParallaxLayer>
 
