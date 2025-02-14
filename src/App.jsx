@@ -49,7 +49,7 @@ function App() {
               </div>
               <div
                 className="flex gap-1 text-white text-xl hover:scale-110 hover:cursor-pointer transition-transform duration-200"
-                onClick={() => window.open("https://t.me/", "_blank")}
+                onClick={() => window.open("https://t.me/degenape_portal", "_blank")}
               >
                 <p>『</p>
                 <p className='drop-shadow-[2px_2px_0px_black]'>TG</p>
